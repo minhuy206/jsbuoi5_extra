@@ -67,7 +67,7 @@ document.getElementById("btnCalPrice").onclick = function () {
   document.getElementById("infoPrice").innerHTML = "";
   var infoPrice = document.createElement("p");
   infoPrice.innerHTML =
-    " Mã số khách hàng: " + customerCode + "; Tiền cáp: " + total;
+    " Mã số khách hàng: " + customerCode + "; Tiền cáp: " + total + "$";
   document.getElementById("infoPrice").appendChild(infoPrice);
 };
 
@@ -96,5 +96,6 @@ function selectTypeOfCustomerAndCal(
       personalPrimaryServiceCost +
       personalHighClassChannelHireCost;
   }
-  return total;
+  var formatter = Intl.NumberFormat("en-Us");
+  return formatter.format(total);
 }
