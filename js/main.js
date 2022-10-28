@@ -64,11 +64,11 @@ document.getElementById("btnCalPrice").onclick = function () {
     amountConnection,
     amountHighClassChannel
   );
-  console.log(total);
   document.getElementById("infoPrice").innerHTML = "";
   var infoPrice = document.createElement("p");
   infoPrice.innerHTML =
     " Mã số khách hàng: " + customerCode + "; Tiền cáp: " + total;
+  document.getElementById("infoPrice").appendChild(infoPrice);
 };
 
 function selectTypeOfCustomerAndCal(
@@ -77,7 +77,7 @@ function selectTypeOfCustomerAndCal(
   amountHighClassChannel
 ) {
   var total;
-  if (typeOfCustomer === enterprise) {
+  if (typeOfCustomer === "enterprise") {
     if (amountConnection > 10) {
       total =
         enterpriseBillHandleCost +
@@ -90,7 +90,7 @@ function selectTypeOfCustomerAndCal(
         enterprisePrimaryServiceCostForFirstTenConnection +
         amountHighClassChannel * enterpriseChannelHireCost;
     }
-  } else if (typeOfCustomer === personal) {
+  } else if (typeOfCustomer === "personal") {
     total =
       personalBillHandleCost +
       personalPrimaryServiceCost +
