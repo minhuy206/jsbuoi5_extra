@@ -51,7 +51,7 @@ const personalHighClassChannelHireCost = 7.5;
 const enterpriseBillHandleCost = 15;
 const enterprisePrimaryServiceCostForFirstTenConnection = 75;
 const enterprisePrimaryServiceCostForMoreConnection = 5;
-const enterpriseChannelHireCost = 50;
+const enterpriseHighClassChannelHireCost = 50;
 
 document.getElementById("btnCalPrice").onclick = function () {
   var typeOfCustomer = document.getElementById("typeOfCustomer").value;
@@ -81,21 +81,22 @@ function selectTypeOfCustomerAndCal(
     if (amountConnection > 10) {
       total =
         enterpriseBillHandleCost +
+        enterprisePrimaryServiceCostForFirstTenConnection +
         enterprisePrimaryServiceCostForMoreConnection *
           (amountConnection - 10) +
-        amountHighClassChannel * enterpriseChannelHireCost;
+        amountHighClassChannel * enterpriseHighClassChannelHireCost;
     } else {
       total =
         enterpriseBillHandleCost +
         enterprisePrimaryServiceCostForFirstTenConnection +
-        amountHighClassChannel * enterpriseChannelHireCost;
+        amountHighClassChannel * enterpriseHighClassChannelHireCost;
     }
   } else if (typeOfCustomer === "personal") {
     total =
       personalBillHandleCost +
       personalPrimaryServiceCost +
-      personalHighClassChannelHireCost;
+      personalHighClassChannelHireCost * amountHighClassChannel;
   }
-  var formatter = Intl.NumberFormat("en-Us");
+  const formatter = Intl.NumberFormat("en-US");
   return formatter.format(total);
 }
