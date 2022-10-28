@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center pt-5">Nộp bài js buổi 5</h1>
+    <h3 class="text-center pt-5">Bài 1</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Tính tiền thuế thu nhập cá nhân</div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Họ và tên</label>
+              <input id="fullName" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Tổng thu nhập năm (triệu)</label>
+              <input id="income" type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Số người phụ thuộc</label>
+              <input
+                id="amountDependPerson"
+                type="number"
+                class="form-control"
+              />
+            </div>
+            <button id="btnCalTax" class="btn btn-success">Tính</button>
+          </div>
+          <div id="infoTax" class="card-footer text-muted"></div>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-center pt-5">Bài 2</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Tính tiền cáp</div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="form-group">
+                <label for="">Chọn loại khách hàng</label>
+                <select class="form-control" name="" id="typeOfCustomer">
+                  <option>--Chọn loại khách hàng--</option>
+                  <option value="personal">Cá nhân</option>
+                  <option value="enterprise">Doanh nghiệp</option>
+                </select>
+              </div>
+              <label>Mã số khách hàng</label>
+              <input id="customerCode" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Số kênh cao cấp</label>
+              <input
+                id="amountHighClassChannel"
+                type="number"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label>Số kết nốt (chỉ doanh nghiệp)</label>
+              <input id="amountConnection" type="number" class="form-control" />
+            </div>
+            <button id="btnCalPrice" class="btn btn-success">Tính</button>
+            <div id="infoPrice" class="card-footer text-muted"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
